@@ -1,4 +1,5 @@
-# Terraform AWS DNS Zones
+Terraform AWS DNS Zones
+=======================
 
 A Terraform module for building a public/private DNS pair in AWS.
 
@@ -12,7 +13,7 @@ To use the module, include something like the following in your terraform config
 
 ```hcl-terraform
 module "dns-zones" {
-  source = "git@github.com:jimmythompson/terraform-aws-dns-zones.git//src"
+  source = "git@github.com:infrablocks/terraform-aws-dns-zones.git//src"
 
   domain_name = "jimmythompson.co.uk"
   private_domain_name = "jimmythompson.net"
