@@ -8,17 +8,14 @@ describe 'Private zone' do
   it { should exist }
 
   it 'outputs the zone id' do
-    expect(subject.id).to(include(output_with_name('private_zone_id')))
+    expect(subject.id).to(include(output_for(:harness, 'private_zone_id')))
   end
 
   it 'outputs the name servers' do
     expected_name_servers =
-        output_with_name('private_zone_name_servers')
+        output_for(:harness, 'private_zone_name_servers')
             .split(',')
             .join
-
-    puts subject.resource_via_client_record_sets
-    puts expected_name_servers
 
     expect(subject)
         .to(have_record_set(subject.name)

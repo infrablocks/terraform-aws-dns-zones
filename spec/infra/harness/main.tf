@@ -1,7 +1,5 @@
 module "dns_zones" {
-  source = "../../../src"
-
-  region = "${var.region}"
+  source = "../../../../"
 
   domain_name = "${var.domain_name}"
   private_domain_name = "${var.private_domain_name}"

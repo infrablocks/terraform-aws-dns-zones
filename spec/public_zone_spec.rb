@@ -8,12 +8,12 @@ describe 'Public zone' do
   it {should exist}
 
   it 'outputs the zone id' do
-    expect(subject.id).to(include(output_with_name('public_zone_id')))
+    expect(subject.id).to(include(output_for(:harness, 'public_zone_id')))
   end
 
   it 'outputs the name servers' do
     expected_name_servers =
-        output_with_name('public_zone_name_servers')
+        output_for(:harness, 'public_zone_name_servers')
             .split(',')
             .map { |ns| "#{ns}."}
             .join
