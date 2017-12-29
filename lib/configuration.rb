@@ -29,18 +29,6 @@ class Configuration
     self.send("#{role}_parameters_for", args)
   end
 
-  def prerequisites_parameters_for(args)
-    module_parameters_for(
-        deployment_identifier: deployment_identifier_for(args),
-        source_directory: Paths.join('spec', 'infra', 'prerequisites'),
-        work_directory: work_directory,
-        state_file: Paths.from_project_root_directory(
-            'state', 'prerequisites.tfstate'),
-        vars_template_file: (ENV['PREREQUISITES_VARS_TEMPLATE_FILE'] ||
-            Paths.from_project_root_directory(
-                'config', 'vars', 'prerequisites.yml.erb')))
-  end
-
   def harness_parameters_for(args)
     module_parameters_for(
         deployment_identifier: deployment_identifier_for(args),
