@@ -113,12 +113,6 @@ execute:
 ./go
 ```
 
-To provision the module prerequisites:
-
-```bash
-./go deployment:prerequisites:provision[<deployment_identifier>]
-```
-
 To provision the module contents:
 
 ```bash
@@ -129,12 +123,6 @@ To destroy the module contents:
 
 ```bash
 ./go deployment:harness:destroy[<deployment_identifier>]
-```
-
-To destroy the module prerequisites:
-
-```bash
-./go deployment:prerequisites:destroy[<deployment_identifier>]
 ```
 
 
