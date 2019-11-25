@@ -1,0 +1,11 @@
+---
+source_directory: "spec/infra/harness"
+state_file: "%{hiera('project_directory')}/state/harness.tfstate"
+vars:
+  region: "%{hiera('region')}"
+
+  domain_name: "%{hiera('domain_name')}"
+  private_domain_name: "%{hiera('private_domain_name')}"
+
+  private_zone_vpc_id: "%{hiera('private_zone_vpc_id')}"
+  private_zone_vpc_region: "%{hiera('private_zone_vpc_region')}"
