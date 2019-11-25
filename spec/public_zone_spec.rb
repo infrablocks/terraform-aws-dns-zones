@@ -13,10 +13,9 @@ describe 'Public zone' do
 
   it 'outputs the name servers' do
     expected_name_servers =
-        output_for(:harness, 'public_zone_name_servers')
-            .split(',')
-            .map { |ns| "#{ns}."}
-            .join
+        output_for(:harness, 'public_zone_name_servers', parse: true)
+          .map { |ns| "#{ns}."}
+          .join("\n")
 
     expect(subject)
         .to(have_record_set(subject.name)

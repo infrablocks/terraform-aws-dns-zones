@@ -13,9 +13,8 @@ describe 'Private zone' do
 
   it 'outputs the name servers' do
     expected_name_servers =
-        output_for(:harness, 'private_zone_name_servers')
-            .split(',')
-            .join
+        output_for(:harness, 'private_zone_name_servers', parse: true)
+          .join("\n")
 
     expect(subject)
         .to(have_record_set(subject.name)
