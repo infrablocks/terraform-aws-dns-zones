@@ -1,5 +1,6 @@
 module "dns_zones" {
-  source = "../../../../"
+  # This makes absolutely no sense. I think there's a bug in terraform.
+  source = "./../../../../../../../"
 
   domain_name = var.domain_name
   private_domain_name = var.private_domain_name
