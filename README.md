@@ -30,6 +30,9 @@ module "dns-zones" {
 }
 ```
 
+See the 
+[Terraform registry entry](https://registry.terraform.io/modules/infrablocks/dns-zones/aws/latest) 
+for more details.
 
 ### Inputs
 
@@ -50,6 +53,10 @@ module "dns-zones" {
 | private_zone_id           | The ID of the created private zone           |
 | private_zone_name_servers | The name servers of the created private zone |
 
+### Compatibility
+
+This module is compatible with Terraform versions greater than or equal to 
+Terraform 0.14.
 
 Development
 -----------
