@@ -9,7 +9,7 @@ This consists of:
 * A public DNS zone
 * A private DNS zone
 
-![Diagram of infrastructure managed by this module](https://raw.githubusercontent.com/infrablocks/terraform-aws-dns-zones/master/docs/architecture.png)
+![Diagram of infrastructure managed by this module](https://raw.githubusercontent.com/infrablocks/terraform-aws-dns-zones/main/docs/architecture.png)
 
 Usage
 -----
