@@ -1,0 +1,8 @@
+---
+configuration_directory: "%{cwd}/spec/unit/infra/root"
+state_file: "%{cwd}/state/root.tfstate"
+vars:
+  region: "%{hiera('region')}"
+
+  domain_name: "%{hiera('domain_name')}"
+  private_domain_name: "%{hiera('private_domain_name')}"
